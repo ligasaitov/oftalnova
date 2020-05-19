@@ -307,8 +307,8 @@ h6 {
 
 h1 {
   color: #22283d;
-  font-size: -webkit-calc(30px + 40 * ((100vw - 320px) / 960));
-  font-size: calc(30px + 40 * ((100vw - 320px) / 960));
+  font-size: -webkit-calc(30px + 18 * ((100vw - 320px) / 960));
+  font-size: calc(30px + 18 * ((100vw - 320px) / 960));
   font-weight: 800;
   line-height: 1 !important;
 }

@@ -15,12 +15,18 @@ $(document).ready(function() {
 	if(isMobile.any()){
 		$('body').addClass('touch');
 	}
-
 ymaps.ready(init);
 function init() {
+	// Создание карты.
 	var myMap = new ymaps.Map("map", {
+		// Координаты центра карты.
+		// Порядок по умолчанию: «широта, долгота».
+		// Чтобы не определять координаты центра карты вручную,
+		// воспользуйтесь инструментом Определение координат.
 		controls: [],
 		center: [55.67885812457311,37.63375173544312],
+		// Уровень масштабирования. Допустимые значения:
+		// от 0 (весь мир) до 19.
 		zoom: 17
 	});
 
@@ -28,12 +34,19 @@ function init() {
 		id:'2'
 	},
 	{
+	// Опции.
 	hasBalloon:false,
 	hideIconOnBalloonOpen:false,
+	// Необходимо указать данный тип макета.
 	iconLayout: 'default#imageWithContent',
+	// Своё изображение иконки метки.
 	iconImageHref: 'img/icons/map-arrow.png',
+	// Размеры метки.
 	iconImageSize: [40, 40],
+	// Смещение левого верхнего угла иконки относительно
+	// её "ножки" (точки привязки).
 	iconImageOffset: [-20, -15],
+	// Смещение слоя с содержимым относительно слоя с картинкой.
 	iconContentOffset: [0,0],
 });
 	myMap.geoObjects.add(myPlacemark);
@@ -44,10 +57,18 @@ function init() {
 		'zoomControl', {size: 'large'}
 		);
 
+// ------------------------------------------------
 
+	// Создание карты.
 	var myContMap = new ymaps.Map("contacts__map", {
+		// Координаты центра карты.
+		// Порядок по умолчанию: «широта, долгота».
+		// Чтобы не определять координаты центра карты вручную,
+		// воспользуйтесь инструментом Определение координат.
 		controls: [],
 		center: [55.6805908886436,37.645627491176604],
+		// Уровень масштабирования. Допустимые значения:
+		// от 0 (весь мир) до 19.
 		zoom: 14
 	});
 
@@ -55,16 +76,26 @@ function init() {
 		id:'2'
 	},
 	{
+	// Опции.
 	hasBalloon:false,
 	hideIconOnBalloonOpen:false,
+	// Необходимо указать данный тип макета.
 	iconLayout: 'default#imageWithContent',
+	// Своё изображение иконки метки.
 	iconImageHref: 'img/icons/map-arrow.png',
+	// Размеры метки.
 	iconImageSize: [40, 40],
+	// Смещение левого верхнего угла иконки относительно
+	// её "ножки" (точки привязки).
 	iconImageOffset: [-20, -15],
+	// Смещение слоя с содержимым относительно слоя с картинкой.
 	iconContentOffset: [0,0],
 });
 
+// Создание экземпляра маршрута.
 var nagatinskaya = new ymaps.multiRouter.MultiRoute({
+	// Точки маршрута.
+	// Обязательное поле. 
 	referencePoints: [
 	[55.68414325465113,37.62355665897751],
 	[55.68422508328465,37.62362907862092],
@@ -72,13 +103,17 @@ var nagatinskaya = new ymaps.multiRouter.MultiRoute({
 	[55.67885812457311,37.63375173544312],
 	],
 	params: {
+	// Тип маршрута: на общественном транспорте.
 	routingMode: "masstransit"
 }
 }, {
+	// Автоматически устанавливать границы карты так, чтобы маршрут был виден целиком.
 	boundsAutoApply: false
 });
 
+// Создание экземпляра маршрута.
 var kolomenskaya = new ymaps.multiRouter.MultiRoute({   
+// Точки маршрута.
 referencePoints: [
 [55.6776464598608,37.66451591471408],
 [55.677866221162795,37.66539836147998],
@@ -86,24 +121,31 @@ referencePoints: [
 [55.67885812457311,37.63375173544312],
 ],
 params: {
+// Тип маршрута: на общественном транспорте.
 routingMode: "masstransit"
 }
 }, {
+// Автоматически устанавливать границы карты так, чтобы маршрут был виден целиком.
 boundsAutoApply: false
 });
 
+// Создание экземпляра маршрута.
 var walk = new ymaps.multiRouter.MultiRoute({   
+// Точки маршрута.
 referencePoints: [
 [55.68381713029028,37.62371962167977],
 [55.67885812457311,37.63375173544312],
 ],
 params: {
+// Тип маршрута: на общественном транспорте.
 routingMode: "masstransit"
 }
 }, {
+	// Автоматически устанавливать границы карты так, чтобы маршрут был виден целиком.
 boundsAutoApply: false
 });
 
+// Добавление маршрута на карту.
 myContMap.geoObjects.add(nagatinskaya);
 myContMap.geoObjects.add(kolomenskaya);
 myContMap.geoObjects.add(walk);
@@ -256,6 +298,7 @@ if ($('.newsmodule-slider').length > 0) {
 	});
 }
 
+// MAIN SLIDER
 if ($('.main_sl').length > 0) {
 	$('.main_sl').slick({
 		autoplay: false,
@@ -268,6 +311,7 @@ if ($('.main_sl').length > 0) {
 		adaptiveHeight: true,
 		//asNavFor:'',
 		//appendDots:
+		// appendArrows:$('.main_sl-arrows .container'),
 		nextArrow: '<button type="button" class="slick-next"><img class="svg" src="img/icons/right-arrow.svg" alt="" /></button>',
 		prevArrow: '<button type="button" class="slick-prev"><img class="svg" src="img/icons/right-arrow.svg" alt="" /></button>',
 		responsive: [{
@@ -277,6 +321,7 @@ if ($('.main_sl').length > 0) {
 	});
 }
 
+// OFTALMOLOG SLIDER
 if ($('.kids_sl').length > 0) {
 	$('.kids_sl').slick({
 		autoplay: false,
@@ -290,6 +335,7 @@ if ($('.kids_sl').length > 0) {
 		initialSlide: 3,
 		//asNavFor:'',
 		//appendDots:
+		// appendArrows:$('.kids_sl-arrows .container'),
 		nextArrow: '<button type="button" class="slick-next"><img class="svg" src="img/icons/right-arrow.svg" alt="" /></button>',
 		prevArrow: '<button type="button" class="slick-prev"><img class="svg" src="img/icons/right-arrow.svg" alt="" /></button>',
 		responsive: [{
@@ -299,6 +345,7 @@ if ($('.kids_sl').length > 0) {
 	});
 }
 
+// DIAGNOSTIC SLIDER
 if ($('.diagnostic_sl').length > 0) {
 	$('.diagnostic_sl').slick({
 		autoplay: false,
@@ -312,6 +359,7 @@ if ($('.diagnostic_sl').length > 0) {
 		initialSlide: 0,
 		//asNavFor:'',
 		//appendDots:
+		// appendArrows:$('.diagnostic_sl-arrows .container'),
 		nextArrow: '<button type="button" class="slick-next"><img class="svg" src="img/icons/right-arrow.svg" alt="" /></button>',
 		prevArrow: '<button type="button" class="slick-prev"><img class="svg" src="img/icons/right-arrow.svg" alt="" /></button>',
 		responsive: [{
@@ -321,6 +369,7 @@ if ($('.diagnostic_sl').length > 0) {
 	});
 }
 
+// NIGHT LENS SLIDER
 if ($('.night_sl').length > 0) {
 	$('.night_sl').slick({
 		autoplay: false,
@@ -334,6 +383,7 @@ if ($('.night_sl').length > 0) {
 		initialSlide: 2,
 		//asNavFor:'',
 		//appendDots:
+		// appendArrows:$('.night_sl-arrows .container'),
 		nextArrow: '<button type="button" class="slick-next"><img class="svg" src="img/icons/right-arrow.svg" alt="" /></button>',
 		prevArrow: '<button type="button" class="slick-prev"><img class="svg" src="img/icons/right-arrow.svg" alt="" /></button>',
 		responsive: [{
@@ -343,6 +393,7 @@ if ($('.night_sl').length > 0) {
 	});
 }
 
+// SKLERAL LENS SLIDER
 if ($('.skleral_sl').length > 0) {
 	$('.skleral_sl').slick({
 		autoplay: false,
@@ -356,6 +407,7 @@ if ($('.skleral_sl').length > 0) {
 		initialSlide: 1,
 		//asNavFor:'',
 		//appendDots:
+		// appendArrows:$('.skleral_sl-arrows .container'),
 		nextArrow: '<button type="button" class="slick-next"><img class="svg" src="img/icons/right-arrow.svg" alt="" /></button>',
 		prevArrow: '<button type="button" class="slick-prev"><img class="svg" src="img/icons/right-arrow.svg" alt="" /></button>',
 		responsive: [{
@@ -365,6 +417,7 @@ if ($('.skleral_sl').length > 0) {
 	});
 }
 
+// SKLERAL LENS SLIDER
 if ($('.optic_sl').length > 0) {
 	$('.optic_sl').slick({
 		autoplay: false,
@@ -378,6 +431,7 @@ if ($('.optic_sl').length > 0) {
 		initialSlide: 4,
 		//asNavFor:'',
 		//appendDots:
+		// appendArrows:$('.optic_sl-arrows .container'),
 		nextArrow: '<button type="button" class="slick-next"><img class="svg" src="img/icons/right-arrow.svg" alt="" /></button>',
 		prevArrow: '<button type="button" class="slick-prev"><img class="svg" src="img/icons/right-arrow.svg" alt="" /></button>',
 		responsive: [{
@@ -387,6 +441,7 @@ if ($('.optic_sl').length > 0) {
 	});
 }
 
+// SERVICES SLIDER
 if ($('.services__slider_sliders').length > 0) {
 	$('.services__slider_sliders').slick({
 		autoplay: false,
@@ -398,6 +453,7 @@ if ($('.services__slider_sliders').length > 0) {
 		autoplaySpeed: 5000,
 		//asNavFor:'',
 		appendDots: $('.services__slider_sliders-dots'),
+		// appendArrows:$('.services__slider_sliders-arrows .container'),
 		nextArrow: '<button type="button" class="slick-next"><img class="svg" src="img/icons/right-arrow.svg" alt="" /></button>',
 		prevArrow: '<button type="button" class="slick-prev"><img class="svg" src="img/icons/right-arrow.svg" alt="" /></button>',
 		responsive: [{
@@ -409,10 +465,12 @@ if ($('.services__slider_sliders').length > 0) {
 	});
 }
 
+// SPECIALISTS SLIDER
 if ($('.specialists__slider_sliders').length > 0) {
 	$('.specialists__slider_sliders').slick({
 		autoplay: false,
 		//infinite: false,
+		// dots: true,
 		arrows: true,
 		accessibility: false,
 		slidesToShow: 4,
@@ -440,20 +498,26 @@ if ($('.specialists__slider_sliders').length > 0) {
 	});
 }
 
+// CERTIFICATES GALLERY
 if ($('.photo_gallery').length > 0) {
 	baguetteBox.run('.photo_gallery', {
+		// Custom options
 	});
 }
 
+// GALLERY
 if ($('.gallery__slider_sliders').length > 0) {
 	baguetteBox.run('.gallery__slider_sliders', {
+		// Custom options
 	});
 }
 
+// GALLERY SLIDER
 if ($('.gallery__slider_sliders').length > 0) {
 	$('.gallery__slider_sliders').slick({
 		autoplay: false,
 		//infinite: false,
+		// dots: true,
 		arrows: true,
 		accessibility: false,
 		slidesToShow: 3,
@@ -478,10 +542,12 @@ if ($('.gallery__slider_sliders').length > 0) {
 	});
 }
 
+// EQUIPMENTS SLIDER
 if ($('.equipment__slider_sliders').length > 0) {
 	$('.equipment__slider_sliders').slick({
 		autoplay: false,
 		//infinite: false,
+		// dots: true,
 		arrows: true,
 		accessibility: false,
 		slidesToShow: 3,
@@ -508,15 +574,18 @@ if ($('.equipment__slider_sliders').length > 0) {
 	});
 }
 
+// SETS SLIDER
 if ($('.sets__slider_sliders').length > 0) {
 	$('.sets__slider_sliders').slick({
 		autoplay: false,
 		//infinite: false,
+		// dots: true,
 		arrows: true,
 		accessibility: false,
 		slidesToShow: 2,
 		slidesToScroll: 1,
 		autoplaySpeed: 5000,
+		// adaptiveHeight: true,
 		//asNavFor:'',
 		appendArrows: $('.sets__slider_sliders-arrows'),
 		nextArrow: '<button type="button" class="slick-next"><img class="svg" src="img/icons/right-arrow.svg" alt="" /></button>',
@@ -532,10 +601,12 @@ if ($('.sets__slider_sliders').length > 0) {
 	});
 }
 
+// VIDEO SLIDER
 if ($('.video__slider_sliders').length > 0) {
 	$('.video__slider_sliders').slick({
 		autoplay: false,
 		//infinite: false,
+		// dots: true,
 		arrows: true,
 		accessibility: false,
 		slidesToShow: 2,
@@ -557,6 +628,7 @@ if ($('.video__slider_sliders').length > 0) {
 	});
 }
 
+// ELLIPSE BG
 elS = '<div class="ellipse-';
 elC = ' ibg parallax__layer layer" data-depth="0.05"><img src="img/bg/ellipse-';
 elE = '.webp" alt="" /></div>';
@@ -577,6 +649,7 @@ if($('.linear_bg .ellips-bg:nth-child(5)').length>0){
 	$('.linear_bg .ellips-bg:nth-child(5)').append(elS + '5' + elC + '4' + elE);
 }
 
+// PARALLAX
 if($('.ellips-bg').length>0){
 	parImg();
 }
@@ -608,17 +681,22 @@ jQuery('img.svg').each(function () {
 	var imgURL = $img.attr('src');
 
 	jQuery.get(imgURL, function (data) {
+		// Get the SVG tag, ignore the rest
 		var $svg = jQuery(data).find('svg');
 
+		// Add replaced image's ID to the new SVG
 		if (typeof imgID !== 'undefined') {
 			$svg = $svg.attr('id', imgID);
 		}
+		// Add replaced image's classes to the new SVG
 		if (typeof imgClass !== 'undefined') {
 			$svg = $svg.attr('class', imgClass + ' replaced-svg');
 		}
 
+		// Remove any invalid XML tags as per http://validator.w3.org
 		$svg = $svg.removeAttr('xmlns:a');
 
+		// Replace image with new SVG
 		$img.replaceWith($svg);
 
 	}, 'xml');
@@ -1058,6 +1136,42 @@ $('form button[type=submit]').click(function(){
 	});
 	if(er==0){
 		removeFormError(form);
+		/*
+			var messagehtml='';
+		if(form.hasClass('editprofile')){
+			var messagehtml='';
+		}
+		formLoad();
+		*/
+
+		//ОПТРАВКА ФОРМЫ
+		/*
+		function showResponse(html){
+			if(!form.hasClass('nomessage')){
+				showMessage(messagehtml);
+			}
+			if(!form.hasClass('noclear')){
+				clearForm(form);
+			}
+		}
+		var options={
+			success:showResponse
+		};
+			form.ajaxForm(options);
+		
+
+		setTimeout(function(){
+			if(!form.hasClass('nomessage')){
+				//showMessage(messagehtml);
+				showMessageByClass(ms);
+			}
+			if(!form.hasClass('noclear')){
+				clearForm(form);
+			}
+		},0);
+
+		return false;
+		*/
 
 		if(ms!=null && ms!=''){
 			showMessageByClass(ms);
@@ -1235,6 +1349,7 @@ function searchselectreset() {
 			}
 			$('body').toggleClass('lock');
 			if(!$(this).hasClass('active')){
+				// $('body,html').scrollTop(parseInt($('body').data('scroll')));
 			}
 		});
 
@@ -1243,6 +1358,7 @@ function searchselectreset() {
 //ZOOM
 if($('.gallery').length>0){
 	baguetteBox.run('.gallery', {
+		// Custom options
 	});
 }
 /*
@@ -1364,6 +1480,7 @@ $('#up').click(function(event) {
 	$('body,html').animate({scrollTop:0},1000);
 });
 
+// TABS
 $('body').on('click','.tab__navitem',function(event) {
 	var eq=$(this).index();
 	if($(this).hasClass('parent')){
@@ -1462,6 +1579,8 @@ function tip(){
 	});
 }
 
+// --------------------------------------------------------------
+// BURGER
 function burgerMenu() {
 	$('.header__burger').click(function (event) {
 		$('.header__burger, .header__menu').toggleClass('active');
@@ -1477,6 +1596,7 @@ function burgerMenu() {
 }
 burgerMenu();
 
+// SUB MENU
 let body = document.querySelector('body');
 if (isMobile.any()) {
 	body.classList.add('touch');
@@ -1496,12 +1616,14 @@ if (isMobile.any()) {
 	body.classList.add('mouse');
 }
 
+// READ MORE
 $('.read-more').click(function () {
 	$('.price_list_hide').slideToggle();
 	$('.price_list_item:nth-child(4)').toggleClass('open');
 	$('.read-more').toggleClass('active');
 });
 
+// ALL REVIEWS
 $('.all-reviews').click(function () {
 	$('.grid-item').removeClass('hide');
 	$('.all-reviews').addClass('hide').removeClass('all-reviews');
@@ -1511,35 +1633,47 @@ $('.filters .select-options__value').click(function () {
 	$('.all-reviews').addClass('hide').removeClass('all-reviews');
 });
 
+// SMOOTH SCROLLING
 $('a').on('click', function(e){
 	$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top }, 1000);
 	e.preventDefault();
 });
 
+// AUTOSIZE TEXTAREA
 var textarea = document.querySelector('textarea');
 textarea.addEventListener('keydown', autosize);
 function autosize() {
 	var el = this;
 	setTimeout(function () {
 		el.style.cssText = 'height:auto; padding:0';
+		// for box-sizing other than "content-box" use:
+		// el.style.cssText = '-moz-box-sizing:content-box';
 		el.style.cssText = 'height:' + el.scrollHeight + 'px';
 	}, 0);
 }
 
+// FILTER REVIEWS
+// init Isotope
 var $grid = $('.grid').isotope({
 	itemSelector: '.grid-item'
 });
 
+// store filter for each group
 var filters = {};
 
 $('.filters').on('change', function (event) {
 	var $select = $(event.target);
+	// get group key
 	var filterGroup = $select.attr('data-group');
+	// set filter for group
 	filters[filterGroup] = event.target.value;
+	// combine filters
 	var filterValue = concatValues(filters);
+	// set filter for Isotope
 	$grid.isotope({ filter: filterValue });
 });
 
+// flatten object by concatting values
 function concatValues(obj) {
 	var value = '';
 	for (var prop in obj) {
@@ -1547,5 +1681,8 @@ function concatValues(obj) {
 	}
 	return value;
 }
+
+
+
 
 });
