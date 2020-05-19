@@ -9221,20 +9221,30 @@ ol.counter li:before {
   }
 
   .main__slider .slick-dots {
-    position: relative;
-    height: 0;
-    width: 200px;
-    bottom: 50px;
-    margin: 0 0 0 40px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    position: absolute;
+    background: transparent !important;
     background-color: transparent !important;
-    background: 0 0 !important;
+    height: auto;
+    bottom: 40px;
+    left: 85px;
   }
 
   .main__slider .slick-dots li {
-    height: 0;
-    width: 0;
+    width: 27px;
+    margin: 0 10px;
     background-color: transparent !important;
-    background: 0 0 !important;
+    border-right: 0 !important;
   }
 
   .main__slider .slick-dots li.slick-active button {
@@ -9249,12 +9259,13 @@ ol.counter li:before {
     background-color: #004a7c;
     position: absolute;
     top: 10px;
-    left: -7px;
+    left: 0px;
   }
 
   .main__slider .slick-dots li:first-child button,
   .main__slider .slick-dots li:last-child button {
     font-size: 14px !important;
+    left: 0;
   }
 
   .main__slider .slick-dots li:first-child button::before,
@@ -9263,14 +9274,13 @@ ol.counter li:before {
   }
 
   .main__slider .slick-dots li button {
-    height: 0;
-    width: 0;
     color: #004a7c;
     font-weight: 700;
     line-height: 24px;
+    font-size: 0;
     opacity: .2;
-    background-color: transparent !important;
-    background: 0 0 !important;
+    position: relative;
+    background: 0 0;
   }
 
   .main__slider .slick-dots li button::after {
@@ -9368,7 +9378,6 @@ ol.counter li:before {
   }
 
   .services__slider .slick-dots {
-    position: relative;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -9376,25 +9385,16 @@ ol.counter li:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    position: relative;
-    height: 0;
-    width: 200px;
-    margin: 20px auto 0 auto;
-    background-color: transparent !important;
-    background: 0 0 !important;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 20px 0 0 0;
   }
 
   .services__slider .slick-dots li {
-    height: 0;
-    width: 0;
-    background-color: transparent !important;
-    background: 0 0 !important;
-    position: relative;
-    margin: 0 0 0 -20px;
+    width: 27px;
+    margin: 0 10px;
   }
 
   .services__slider .slick-dots li.slick-active button {
@@ -9412,31 +9412,25 @@ ol.counter li:before {
     left: -7px;
   }
 
-  .services__slider .slick-dots li button {
-    height: 0;
-    width: 0;
-    color: #004a7c;
-    font-weight: 700;
-    line-height: 24px;
-    opacity: .2;
-    background-color: transparent !important;
-    background: 0 0 !important;
-    font-size: 0;
-  }
-
-  .services__slider .slick-dots li button::after {
-    display: none;
-  }
-
   .services__slider .slick-dots li:first-child button,
   .services__slider .slick-dots li:last-child button {
     font-size: 14px !important;
+    left: 0;
   }
 
   .services__slider .slick-dots li:first-child button::before,
   .services__slider .slick-dots li:last-child button::before {
     content: '0';
-    font-size: 14px !important;
+  }
+
+  .services__slider .slick-dots li button {
+    color: #004a7c;
+    font-weight: 700;
+    line-height: 24px;
+    font-size: 0;
+    opacity: .2;
+    position: relative;
+    background: 0 0;
   }
 
   .services__slider > div:nth-child(1) {
@@ -10695,12 +10689,14 @@ ol.counter li:before {
   }
 
   .main__slider .slick-dots {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     left: 0;
     right: 0;
-    margin: 0 auto;
-    -webkit-transform: translate3d(-10px, 0, 0);
-    -ms-transform: translate3d(-10px, 0, 0);
-    transform: translate3d(-10px, 0, 0);
+    bottom: 20px;
+    margin: 0px auto;
   }
 
   .main__slider_item {
