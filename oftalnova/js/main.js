@@ -1516,8 +1516,6 @@ $('body').on('click','.spoller',function(event) {
 	return false;
 });
 
-
-
 function scrolloptions(){
 	var scs=100;
 	var mss=50;
