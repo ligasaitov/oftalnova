@@ -7446,6 +7446,10 @@ ol.counter li:before {
   background-image: url(../img/main/form_image_shadow.webp);
 }
 
+.main__slider.main_sl > .main__slider_item.main_sl_item:not(:first-child) {
+  display: none;
+}
+
 .webp .btn span::after {
   background-image: url(../img/icons/right-arrow.webp);
 }
