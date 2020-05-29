@@ -7676,7 +7676,6 @@ ol.counter li:before {
   right: 0px;
   width: 45px;
   height: 100%;
-  background: url("../img/icons/select-arrow.svg") center no-repeat;
 }
 
 .select .select-title__value {
