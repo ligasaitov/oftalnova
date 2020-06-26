@@ -960,6 +960,39 @@ div[class*="popup-video-"] .popup-close {
   min-height: 80%;
 }
 
+header {
+  background: #f5f5f9;
+}
+
+header .header-fixed {
+  position: fixed;
+  top: -147px;
+  z-index: 100;
+  background: #f5f5f9;
+  border-bottom: 1px solid rgba(34, 40, 61, 0.1);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+header .header-fixed.fixed-on {
+  top: 0;
+}
+
+header .header-fixed .container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 header .header__top {
   display: -webkit-box;
   display: -webkit-flex;

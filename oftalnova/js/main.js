@@ -656,6 +656,15 @@ if($('.ellips-bg').length>0){
 function parImg() {
 	$('.wrapper').parallax();
 }
+
+$(window).scroll(function(){
+	if($(this).scrollTop()>1050){
+		$('.header-fixed').addClass('fixed-on');
+	}
+	else if ($(this).scrollTop()<1050){
+		$('.header-fixed').removeClass('fixed-on');
+	}
+});
 function testWebP(callback) {
 
 	var webP = new Image();
@@ -1679,8 +1688,5 @@ function concatValues(obj) {
 	}
 	return value;
 }
-
-
-
 
 });
