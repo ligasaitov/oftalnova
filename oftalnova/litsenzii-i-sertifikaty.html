@@ -23,8 +23,70 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 </head>
 <body>
-	<div class="wrapper main__wrapper">
-		<header>
+	<header>
+	<section class="header__top header-fixed">
+		<div class="container">
+			<div class="header__logo">
+				<a href="#">
+					<picture><source srcset="img/main/logo.webp" type="image/webp"><img src="img/main/logo.png" alt="" /></picture>
+				</a>
+			</div>
+			<div class="header__contacts" data-da="header__menu,1,768">
+				<div class="contacts-top">
+					<div class="contacts__icon">
+						<picture><source srcset="img/icons/map.svg" type="image/webp"><img class="svg" src="img/icons/map.svg" alt="" /></picture>
+					</div>
+					<div class="contacts__title">
+						Адрес
+					</div>
+				</div>
+				<div class="contacts-bottom">
+					<div class="contacts__subtitle">
+						г. Москва, 1-й Нагатинский <br />
+						проезд, д.11, корпус 1
+					</div>
+				</div>
+			</div>
+			<div class="header__contacts" data-da="header__menu,2,768">
+				<div class="contacts-top">
+					<div class="contacts__icon">
+						<picture><source srcset="img/icons/clock.svg" type="image/webp"><img class="svg" src="img/icons/clock.svg" alt="" /></picture>
+					</div>
+					<div class="contacts__title">
+						Режим работы
+					</div>
+				</div>
+				<div class="contacts-bottom">
+					<div class="contacts__subtitle">
+						Пн-Сб 10:00 — 19:00 <br />
+						Вс 10:00 — 17:00
+					</div>
+				</div>
+			</div>
+			<div class="header__contacts" data-da="header__menu,3,768">
+				<div class="contacts-top">
+					<div class="contacts__icon">
+						<picture><source srcset="img/icons/phone-call.svg" type="image/webp"><img class="svg" src="img/icons/phone-call.svg" alt="" /></picture>
+					</div>
+					<div class="contacts__title">
+						+7 (499) 944-03-03
+					</div>
+				</div>
+				<div class="contacts-bottom">
+					<div class="link_viber">
+						<a href="#"><picture><source srcset="img/icons/viber.webp" type="image/webp"><img src="img/icons/viber.png" alt="" /></picture></a>
+					</div>
+					<div class="link_whatsapp">
+						<a href="#"><picture><source srcset="img/icons/whatsapp.webp" type="image/webp"><img src="img/icons/whatsapp.png" alt="" /></picture></a>
+					</div>
+					<div class="link_callback">
+						<a class="pl" href="#call">Обратный звонок</a>
+					</div>
+				</div>
+			</div>
+			<div class="header__burger"><span></span></div>
+		</div>
+	</section>
 	<div class="container">
 		<section class="header__top">
 			<div class="header__logo">
@@ -148,6 +210,7 @@
 		</section>
 	</div>
 </header>
+	<div class="wrapper main__wrapper">
 		<div class="container">
 			<div class="ellips-bg">
 				<section class="photo">
