@@ -7694,6 +7694,101 @@ ol.counter li:before {
   margin: 0px 0px 10px 0px;
 }
 
+.novosti__item-link {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.novosti__item-link:hover {
+  text-decoration: none;
+}
+
+.novosti__item-link:hover .novosti__item-image-image {
+  -webkit-transform: translate3d(0, -2px, 0);
+  -ms-transform: translate3d(0, -2px, 0);
+  transform: translate3d(0, -2px, 0);
+}
+
+.novosti__item-link:hover .novosti__item-image-image:before {
+  top: 10px;
+  left: 10px;
+  -webkit-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+
+.novosti__item-image {
+  -webkit-flex-basis: 25%;
+      -ms-flex-preferred-size: 25%;
+          flex-basis: 25%;
+  border-radius: 20px;
+}
+
+.novosti__item-image-image {
+  height: 179px;
+  border-radius: 20px;
+  position: relative;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.novosti__item-image-image:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -o-linear-gradient(top, rgba(0, 74, 124, 0) 0, #004a7c 25%, #004a7c 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 74, 124, 0)), color-stop(25%, #004a7c), to(#004a7c));
+  background: linear-gradient(180deg, rgba(0, 74, 124, 0) 0, #004a7c 25%, #004a7c 100%);
+  opacity: .18;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.novosti__item-image-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+
+.novosti__item-right {
+  -webkit-flex-basis: 75%;
+      -ms-flex-preferred-size: 75%;
+          flex-basis: 75%;
+  padding: 20px;
+}
+
+.novosti__item-name {
+  font-size: 108%;
+  text-decoration: underline;
+}
+
+.novosti__item-text {
+  line-height: 165%;
+  color: #333;
+}
+
+.novosti__item-date {
+  font-size: 85%;
+  color: #004b7a;
+}
+
 .main__slider.main_sl > .main__slider_item.main_sl_item:not(:first-child) {
   display: none;
 }
