@@ -10550,6 +10550,10 @@ ol.counter li:before {
     z-index: 105;
   }
 
+  .header__contacts:nth-child(even) {
+    display: none !important;
+  }
+
   .popup-close {
     top: 10px !important;
     right: 10px !important;
