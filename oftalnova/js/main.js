@@ -15,6 +15,7 @@ $(document).ready(function() {
 	if(isMobile.any()){
 		$('body').addClass('touch');
 	}
+});
 ymaps.ready(init);
 function init() {
 	// Создание карты.
@@ -1689,4 +1690,3 @@ function concatValues(obj) {
 	return value;
 }
 
-});
