@@ -10505,6 +10505,10 @@ ol.counter li:before {
             flex-basis: calc(25% - 40px);
   }
 
+  .main__slider_link {
+    display: none;
+  }
+
   .popup-call .popup-content {
     padding: 40px 30px;
   }
@@ -10922,8 +10926,8 @@ ol.counter li:before {
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 294px;
-    height: 345px;
+    width: 150px;
+    height: 150px;
   }
 
   .main__rating .main__rating_title h3 {
