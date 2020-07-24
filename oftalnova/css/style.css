@@ -2245,7 +2245,7 @@ footer .footer__copyright {
 }
 
 .main__slider .slick-dots li:nth-child(1) button::after {
-  content: 'Диагностика';
+  content: 'Ночные линзы';
   color: #fff;
   font-size: 14px;
   font-weight: 400;
@@ -2267,7 +2267,7 @@ footer .footer__copyright {
 }
 
 .main__slider .slick-dots li:nth-child(3) button::after {
-  content: 'Ночные линзы';
+  content: 'Диагностика';
   color: #fff;
   font-size: 14px;
   font-weight: 400;
@@ -4497,7 +4497,7 @@ footer .footer__copyright {
 }
 
 .oftalmolog__slider .slick-dots li:nth-child(1) button::after {
-  content: 'Диагностика';
+  content: 'Ночные линзы';
   color: #fff;
   font-size: 14px;
   font-weight: 400;
@@ -4519,7 +4519,7 @@ footer .footer__copyright {
 }
 
 .oftalmolog__slider .slick-dots li:nth-child(3) button::after {
-  content: 'Ночные линзы';
+  content: 'Диагностика';
   color: #fff;
   font-size: 14px;
   font-weight: 400;
