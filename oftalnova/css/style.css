@@ -11917,6 +11917,19 @@ ol.counter li:before {
 }
 
 @media (max-width: 600px) {
+  .popup-message .popup__title {
+    font-size: 20px;
+  }
+
+  .popup-content {
+    padding: 30px 20px;
+  }
+
+  .popup__txt {
+    font-size: 16px;
+    margin: 20px 0px 0px 0px;
+  }
+
   .photo_gallery_item {
     -webkit-flex-basis: -webkit-calc(100% - 20px);
     -ms-flex-preferred-size: calc(100% - 20px);
