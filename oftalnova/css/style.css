@@ -2565,14 +2565,6 @@ footer .footer__copyright {
 }
 
 .services__slider_sliders-dots ul li:nth-child(1) button::after {
-  content: 'Диагностика';
-  color: #22283d;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 21px;
-}
-
-.services__slider_sliders-dots ul li:nth-child(2) button::after {
   content: 'Ночные линзы';
   color: #22283d;
   font-size: 14px;
@@ -2580,7 +2572,7 @@ footer .footer__copyright {
   line-height: 21px;
 }
 
-.services__slider_sliders-dots ul li:nth-child(3) button::after {
+.services__slider_sliders-dots ul li:nth-child(2) button::after {
   content: 'Склеральные линзы';
   color: #22283d;
   font-size: 14px;
@@ -2588,8 +2580,16 @@ footer .footer__copyright {
   line-height: 21px;
 }
 
+.services__slider_sliders-dots ul li:nth-child(3) button::after {
+  content: 'Диагностика';
+  color: #22283d;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
 .services__slider_sliders-dots ul li:nth-child(4) button::after {
-  content: 'Оптика';
+  content: 'Детский офтальмолог';
   color: #22283d;
   font-size: 14px;
   font-weight: 700;
@@ -2597,7 +2597,7 @@ footer .footer__copyright {
 }
 
 .services__slider_sliders-dots ul li:nth-child(5) button::after {
-  content: 'Детский офтальмолог';
+  content: 'Оптика';
   color: #22283d;
   font-size: 14px;
   font-weight: 700;
