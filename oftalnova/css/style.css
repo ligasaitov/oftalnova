@@ -7672,7 +7672,6 @@ ol.counter li:before {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid #e8e8e8;
   padding: 10px;
 }
 
