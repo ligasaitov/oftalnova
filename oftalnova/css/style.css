@@ -7934,6 +7934,19 @@ ol.counter li:before {
   display: none;
 }
 
+picture {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
 .webp .btn span::after {
   background-image: url(../img/icons/right-arrow.webp);
 }
